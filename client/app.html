@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+<div class="img"></div>
+<form class="form">
+	<h1>Loan or no Loan</h1>
+	<h2>Gender</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-gender-male" name="uiGender" value="Male"/>
+		<label for="radio-gender-male">Male</label>
+		<input type="radio" id="radio-gender-female" name="uiGender" value="Female"/>
+		<label for="radio-gender-female">Female</label>
+	</div>
+
+	<h2>Married</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-married-yes" name="uiMarried" value="Yes"/>
+		<label for="radio-married-yes">Yes</label>
+		<input type="radio" id="radio-married-no" name="uiMarried" value="No"/>
+		<label for="radio-married-no">No</label>
+	</div>
+
+	<h2>Dependents</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-dep-0" name="uiDep" value="0"/>
+		<label for="radio-dep-0">0</label>
+		<input type="radio" id="radio-dep-1" name="uiDep" value="1"/>
+		<label for="radio-dep-1">1</label>
+		<input type="radio" id="radio-dep-2" name="uiDep" value="2"/>
+		<label for="radio-dep-2">2</label>
+		<input type="radio" id="radio-dep-3+" name="uiDep" value="3+"/>
+		<label for="radio-dep-3+">3+</label>
+	</div>
+
+	<h2>Education</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-education-yes" name="uiEducation" value="Yes"/>
+		<label for="radio-education-yes">Graduate</label>
+		<input type="radio" id="radio-education-no" name="uiEducation" value="No"/>
+		<label for="radio-education-no">Not Graduate</label>
+	</div>
+
+	<h2>Self Employed</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-selfemp-yes" name="uiSelfEmp" value="Yes"/>
+		<label for="radio-selfemp-yes">Yes</label>
+		<input type="radio" id="radio-selfemp-no" name="uiSelfEmp" value="No"/>
+		<label for="radio-selfemp-no">No</label>
+	</div>
+
+	<h2>Credit History</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-credit-yes" name="uiCredit" value="Yes"/>
+		<label for="radio-credit-yes">Yes</label>
+		<input type="radio" id="radio-credit-no" name="uiCredit" value="No"/>
+		<label for="radio-credit-no">No</label>
+	</div>
+
+	<h2>Property Area</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-area-urban" name="uiArea" value="Urban"/>
+		<label for="radio-area-urban">Urban</label>
+		<input type="radio" id="radio-area-semiurban" name="uiArea" value="Semiurban"/>
+		<label for="radio-area-semiurban">Semiurban</label>
+		<input type="radio" id="radio-area-rural" name="uiArea" value="Rural"/>
+		<label for="radio-area-rural">Rural</label>
+	</div>
+
+	<h2>Applicant Income</h2>
+    <input class="money"  type="number" id="uiAppInc" class="floatLabel" name="AppInc" value="0000">
+
+	<h2>Coapplicant Income</h2>
+    <input class="money"  type="number" id="uiCoappInc" class="floatLabel" name="CoappInc" value="0000">
+
+	<h2>Loan Ammount</h2>
+    <input class="money"  type="number" id="uiLoanAmmount" class="floatLabel" name="LoanAmmount" value="0000">
+
+	</form>
+
+<form class="form">
+	<button class="submit" onclick="onClickedChecLoan()" type="button">Submit</button>
+	<div id="uiCheckLoan" class="result">	<h2>Loan rejected</h2> </div>
+</body>
+</html>
